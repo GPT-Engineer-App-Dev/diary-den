@@ -24,6 +24,14 @@ const Layout = () => {
       <main className="flex-grow overflow-auto">
         <Outlet />
       </main>
+      <footer className="border-t p-4 text-center">
+        <div className="flex justify-center space-x-4">
+          <a href="#" className="text-muted-foreground">Facebook</a>
+          <a href="#" className="text-muted-foreground">Twitter</a>
+          <a href="#" className="text-muted-foreground">Instagram</a>
+        </div>
+        <p className="mt-4 text-sm text-muted-foreground">&copy; 2023 My Blog. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
@@ -35,7 +43,7 @@ const DesktopNav = () => (
       className="flex items-center gap-2 text-lg font-semibold md:text-base"
     >
       <Package2 className="h-6 w-6" />
-      <span className="sr-only">Acme Inc</span>
+      <span>My Blog</span>
     </NavItem>
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
@@ -60,7 +68,7 @@ const MobileNav = () => (
           className="flex items-center gap-2 text-lg font-semibold"
         >
           <Package2 className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
+          <span>My Blog</span>
         </NavItem>
         {navItems.map((item) => (
           <NavItem key={item.to} to={item.to}>
@@ -83,9 +91,7 @@ const UserMenu = () => (
     <DropdownMenuContent align="end">
       <DropdownMenuLabel>My Account</DropdownMenuLabel>
       <DropdownMenuSeparator />
-      <DropdownMenuItem>Settings</DropdownMenuItem>
-      <DropdownMenuItem>Support</DropdownMenuItem>
-      <DropdownMenuSeparator />
+      <DropdownMenuItem>Profile</DropdownMenuItem>
       <DropdownMenuItem>Logout</DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>
