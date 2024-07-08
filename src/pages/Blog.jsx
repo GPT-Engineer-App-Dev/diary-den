@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+
 const Blog = () => {
   return (
     <div className="container mx-auto p-4">
@@ -6,7 +9,10 @@ const Blog = () => {
         <p className="text-lg mt-2">Read the latest posts</p>
       </header>
       <section className="my-8">
-        <p>This is the blog page. Here you can list all your blog posts.</p>
+        <Link to="/add-blog-post">
+          <Button variant="primary">Add New Post</Button>
+        </Link>
+        <p className="mt-4">This is the blog page. Here you can list all your blog posts.</p>
       </section>
     </div>
   );
